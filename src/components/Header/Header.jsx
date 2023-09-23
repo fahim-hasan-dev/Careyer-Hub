@@ -4,11 +4,11 @@ const Header = () => {
     const nevLi = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/statistics">Statistics</NavLink></li>
-        <li><NavLink to="/job">Applied Jobs</NavLink></li>
+        <li><NavLink to="/applidJob">Applied Jobs</NavLink></li>
         <li><NavLink to="/blog">Blog</NavLink></li>
         </>
     return (
-        <div className="bg-white">
+        <div className="bg-inherit">
             <div className="navbar ">
                 <div className="navbar-start">
                     <div className="dropdown">

@@ -11,6 +11,7 @@ import Error from './components/EooroPage/Error';
 import Statistics from './components/Statistics/Statistics';
 import Jobs from './components/ApplidJobs/Jobs';
 import Blog from './components/Blogs/Blog';
+import JobDetails from './components/jobdetails/JobDetails';
 
 const router = createBrowserRouter([
   {
@@ -27,12 +28,18 @@ const router = createBrowserRouter([
         element:<Statistics></Statistics>
       },
       {
-        path:"/job",
-        element:<Jobs></Jobs>
+        path:"/applidJob",
+        element:<Jobs></Jobs>,
+        loader:()=>fetch('/public/jobs.json')
       },
       {
         path:"/blog",
         element:<Blog></Blog>
+      },
+      {
+        path: '/job/:id',
+        element:<JobDetails></JobDetails>,
+        loader:()=>fetch('/public/jobs.json')
       }
     ]
   },
